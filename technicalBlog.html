@@ -1,1 +1,39 @@
-//test test test test
+<<<<<< Blog Entry One - Dissecting Average4 Java Source Code Below >>>>>>
+
+//Average4.java is held within the exampoles folder
+//Scanner is used so that the user running the program can manually input 4 numbers when the program runs
+//5 Floats are initialized n1, n2, n3, n4, and average 
+// Each of the Floats are initialized by designating with a capital 'F' at the and of the initialized value
+// The program prints to screen strings prompting the user to input 4 numbers
+// average is set up to calculate the average of the 4 numbers that the user inputs. Parentheses are essential to ensure order of operations
+// Scanner is closed to ensure that the method is closed out before the program stops running
+
+package examples;
+
+public class Average4 {
+    public static void main(String[] args) {
+        java.util.Scanner scanner = new java.util.Scanner(System.in);
+
+        float n1 = 0.0F, n2 = 0.0F, n3 = 0.0F, n4 = 0.0F;
+        float average = 0.0F;
+
+        System.out.println("Enter any four numbers: ");
+        System.out.print("       #1: ");
+        n1 = scanner.nextFloat();
+        System.out.print("       #2: ");
+        n2 = scanner.nextFloat();
+        System.out.print("       #3: ");
+        n3 = scanner.nextFloat();
+        System.out.print("       #4: ");
+        n4 = scanner.nextFloat();
+
+        // Calculate the result and store it in the variable average:
+        average = (n1 + n2 + n3 + n4) / 4;
+
+        System.out.print("The average of (" + n1 + ", " + n2 + ", ");
+        System.out.print(n3 + ", " + n4 + ") is: ");
+        System.out.println(average);
+
+        scanner.close();
+    }
+}
